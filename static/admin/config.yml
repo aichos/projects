@@ -1,0 +1,71 @@
+backend:
+  name: github
+  repo: aichos/projects
+  branch: main
+  auth_endpoint: api/auth
+
+media_folder: "static/assets"
+public_folder: "/assets"
+
+collections:
+  - name: "pages"
+    label: "ページ"
+    folder: "static"
+    create: false
+    fields:
+      - { label: "ファイル名", name: "filename", widget: "hidden" }
+
+  - name: "index"
+    label: "トップページ"
+    file: "static/index.html"
+    format: "html"
+    fields:
+      - {
+          label: "アナウンス",
+          name: "announce",
+          widget: "string",
+          pattern: ["^.{1,100}$", "100文字以内"],
+          hint: "黄色のバーに表示される情報"
+        }
+      - {
+          label: "ヒーロータイトル（日本語）",
+          name: "hero_jp",
+          widget: "text",
+          hint: "トップページの大きな説明文"
+        }
+
+  - name: "about"
+    label: "ブランドページ"
+    file: "static/about.html"
+    format: "html"
+    fields:
+      - {
+          label: "創業者名",
+          name: "founder_name",
+          widget: "string",
+          pattern: ["^.{1,20}$", "20文字以内"]
+        }
+      - {
+          label: "創業者のメッセージ",
+          name: "founder_message",
+          widget: "text",
+          hint: "創業者の想いを記入"
+        }
+
+  - name: "contact"
+    label: "お問い合わせ"
+    file: "static/contact.html"
+    format: "html"
+    fields:
+      - {
+          label: "メールアドレス",
+          name: "contact_email",
+          widget: "string",
+          pattern: ["^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$", "有効なメールアドレスを入力"]
+        }
+      - {
+          label: "電話番号",
+          name: "contact_phone",
+          widget: "string",
+          hint: "例：03-XXXX-XXXX"
+        }
