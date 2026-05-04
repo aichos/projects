@@ -1,96 +1,60 @@
 backend:
-  name: github
-  repo: aichos/projects
-  branch: main
+  name: git-gateway
 
 media_folder: "static/assets"
 public_folder: "/assets"
 
 collections:
-  - name: "content"
-    label: "サイトコンテンツ"
-    folder: "static/_data"
-    format: "json"
-    create: false
-    fields:
-      - { label: "ファイル名", name: "title", widget: "hidden" }
-
   - name: "homepage"
     label: "トップページ"
     file: "static/_data/home.json"
     format: "json"
     fields:
-      - {
-          label: "アナウンス",
-          name: "announce",
-          widget: "string",
-          hint: "黄色のバーに表示される情報"
-        }
-      - {
-          label: "ヒーロータイトル（日本語）",
-          name: "hero_jp",
-          widget: "text",
-          hint: "トップページの大きな説明文"
-        }
-      - {
-          label: "価値提案1",
-          name: "value1",
-          widget: "string"
-        }
-      - {
-          label: "価値提案2",
-          name: "value2",
-          widget: "string"
-        }
-      - {
-          label: "価値提案3",
-          name: "value3",
-          widget: "string"
-        }
-      - {
-          label: "価値提案4",
-          name: "value4",
-          widget: "string"
-        }
+      - label: "アナウンス"
+        name: "announce"
+        widget: "string"
+      - label: "ヒーロータイトル（日本語）"
+        name: "hero_jp"
+        widget: "text"
+      - label: "価値提案1"
+        name: "value1"
+        widget: "string"
+      - label: "価値提案2"
+        name: "value2"
+        widget: "string"
+      - label: "価値提案3"
+        name: "value3"
+        widget: "string"
+      - label: "価値提案4"
+        name: "value4"
+        widget: "string"
 
   - name: "about"
     label: "ブランドページ"
     file: "static/_data/about.json"
     format: "json"
     fields:
-      - {
-          label: "創業者名",
-          name: "founder_name",
-          widget: "string"
-        }
-      - {
-          label: "創業者のメッセージ",
-          name: "founder_message",
-          widget: "text"
-        }
-      - {
-          label: "会社情報",
-          name: "company_info",
-          widget: "text"
-        }
+      - label: "創業者名"
+        name: "founder_name"
+        widget: "string"
+      - label: "創業者のメッセージ"
+        name: "founder_message"
+        widget: "text"
+      - label: "会社情報"
+        name: "company_info"
+        widget: "text"
 
   - name: "contact"
     label: "お問い合わせ"
     file: "static/_data/contact.json"
     format: "json"
     fields:
-      - {
-          label: "メールアドレス",
-          name: "email",
-          widget: "string"
-        }
-      - {
-          label: "電話番号",
-          name: "phone",
-          widget: "string"
-        }
-      - {
-          label: "Instagram",
-          name: "instagram",
-          widget: "string"
-        }
+      - label: "メールアドレス"
+        name: "email"
+        widget: "string"
+      - label: "電話番号"
+        name: "phone"
+        widget: "string"
+      - label: "Instagram"
+        name: "instagram"
+        widget: "string"
